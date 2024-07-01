@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Vendas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: darkblue;
+            color: white;
+        }
+        .header input[type="text"] {
+            width: 60%;
+            padding: 5px;
+        }
+        .progress-bar {
+            width: 80%;
+            height: 15px;
+            background-color: blue;
+            margin: 10px auto;
+            border-radius: 10px;
+            position: relative;
+        }
+        .progress-bar .fill {
+            height: 100%;
+            width: 56%;
+            background-color: lime;
+            border-radius: 10px;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .advertisement {
+            background-color: orange;
+            padding: 10px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: white;
+        }
+        .category-icons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .category-icons div {
+            text-align: center;
+        }
+        .best-sellers {
+            text-align: center;
+        }
+        .best-sellers img {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 10px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            background-color: greenyellow;
+        }
+        .footer div {
+            text-align: center;
+        }
+        .card {
+          width: 130px;
+          height: 120px;
+          background-color: gray;
+          display: inline-block;
+          opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+           <input type="text" placeholder="Buscar">
+           <img src="../img/search.svg" style="margin-left: -200px;">
+<img src="../img/shopping-cart.svg">
+          </div>
+    <div class="progress-bar">      
+        <div class="fill">
+          <br>
+          <center>
+             <span style="margin-right:-800px;">56%</span>
+          </center>
+         
+        </div>
+    </div>
+    <div class="main-content">
+      
+       
+        <div class="advertisement">
+            <h3>Renovação de anúncio grátis</h3>
+            <p>Desapega grátis na OLX e faça uma grana extra.</p>
+        </div>
+        <div class="category-icons">
+            <div>
+              <div class="card">
+                <img src="path/to/perfis.jpg" alt="Perfis" width="60">
+            </div>
+            </div>
+            <div>
+              <div class="card">
+                <img src="path/to/acessorios.jpg" alt="Acessórios" width="60">
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <img src="path/to/bloco.jpg" alt="Bloco de Anotações" width="60">
+                </div>
+            </div>
+            <div>
+              <div class="card">
+                <img src="path/to/promocoes.jpg" alt="Promoções do Dia" width="60">
+                </div>
+            </div>
+        </div>
+        <div class="best-sellers">
+          <br>
+            <h3>MAIS VENDIDOS...</h3>
+            <div class="card" style="display: inline-block;">
+               <img src="path/to/produto1.jpg" alt="Produto 1">
+            </div>
+            <div class="card">
+            <img src="path/to/produto2.jpg" alt="Produto 2">
+          </div>
+       
+    </div>
+  <br>
+  <br>
+   <br>
+  <br>
+   <br>
+  <br>
+   <br>
+  <br>
+  <br>
+  
+    <div class="footer">
+      
+        <img src="../img/home.svg">
+
+        <img src="../img/shopping-bag.svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue	" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+          <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5m0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5z"/>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue" class="bi bi-clipboard-data" viewBox="0 0 16 16">
+          <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z"/>
+          <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+          <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+</svg>
+<a href="../src/menu.html"><img src="../img/menu.svg"></a>
+</div>
+        </body>
+</html>

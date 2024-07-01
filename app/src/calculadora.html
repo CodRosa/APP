@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Projetos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            max-width: 300px;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #4B0082;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #ccc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .button.active {
+            background-color: #4B0082;
+            color: white;
+        }
+
+        .options {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .options p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+        </header>
+        <main>
+            <h2>Calculadora de projetos</h2>
+            <div class="button-group">
+                <button id="temperadoButton" class="button">Temperado</button>
+                <div class="options" id="temperadoOptions">
+                    <p>Janela Temperada<br>2 folhas</p>
+                    <p>Porta Temperada<br>2 folhas</p>
+                    <p>Janela Temperada<br>4 folhas</p>
+                    <p>Porta Temperada<br>4 folhas</p>
+                </div>
+            </div>
+            <button class="button">Stanley</button>
+            <button class="button">Portões</button>
+            <button class="button">Suprema</button>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const temperadoButton = document.getElementById('temperadoButton');
+            const temperadoOptions = document.getElementById('temperadoOptions');
+
+            temperadoButton.addEventListener('click', () => {
+                const isActive = temperadoButton.classList.contains('active');
+                
+                if (isActive) {
+                    temperadoOptions.style.display = 'none';
+                    temperadoButton.classList.remove('active');
+                } else {
+                    temperadoOptions.style.display = 'block';
+                    temperadoButton.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
