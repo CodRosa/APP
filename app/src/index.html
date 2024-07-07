@@ -33,7 +33,7 @@
         }
         .progress-bar .fill {
             height: 100%;
-            width: 56%;
+            width: 0%;
             background-color: lime;
             border-radius: 10px;
         }
@@ -67,38 +67,75 @@
             display: flex;
             justify-content: space-around;
             padding: 30px;
+            margin: -20px;
             background-color: greenyellow;
         }
         .footer div {
             text-align: center;
         }
         .card {
-          width: 130px;
-          height: 120px;
+          width: 170px;
+          height: 190px;
           background-color: gray;
           display: inline-block;
           opacity: 0.5;
+        }
+
+        /* Menu lateral */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: white;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: purple;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        #menuBtn {
+            font-size: 40px;
+            cursor: pointer;
+            color: royalblue;
         }
     </style>
 </head>
 <body>
     <div class="header">
            <input type="text" placeholder="Buscar">
-           <img src="../img/search.svg" style="margin-left: -200px;">
-<img src="../img/shopping-cart.svg">
-          </div>
+           <img src="../img/search.svg" style="margin-left: -160px;">
+           <a href="pagebuy.html"><img src="../img/shopping-cart.svg"></a>
+    </div>
     <div class="progress-bar">      
         <div class="fill">
           <br>
           <center>
-             <span style="margin-right:-800px;">56%</span>
+             <span style="margin-right:-650px;">0%</span>
           </center>
-         
         </div>
     </div>
     <div class="main-content">
-      
-       
         <div class="advertisement">
             <h3>Renovação de anúncio grátis</h3>
             <p>Desapega grátis na OLX e faça uma grana extra.</p>
@@ -127,7 +164,7 @@
         </div>
         <div class="best-sellers">
           <br>
-            <h3>MAIS VENDIDOS...</h3>
+            <h3 style="font-size: 30px;">MAIS VENDIDOS...</h3>
             <div class="card" style="display: inline-block;">
                <img src="path/to/produto1.jpg" alt="Produto 1">
             </div>
@@ -142,25 +179,58 @@
   <br>
    <br>
   <br>
-   <br>
-  <br>
-  <br>
   
     <div class="footer">
-      
-        <img src="../img/home.svg">
-
-        <img src="../img/shopping-bag.svg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue	" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+      <div class="org">
+        <a href="index.html"><img src="../img/home.svg"></a>
+        <h2>Inicio</h2>
+      </div>
+      <div class="org">
+        <A href="loja.html"><img src="../img/shopping-bag.svg"></A>
+        <h2>Loja</h2>
+      </div>
+      <div class="org">
+        <a href="calculadora.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue" class="bi bi-calculator-fill" viewBox="0 0 16 16">
           <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5m0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5z"/>
-        </svg>
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue" class="bi bi-clipboard-data" viewBox="0 0 16 16">
+        </svg></a>
+        <h2>Calculadora</h2>
+      </div>
+      <div class="org">
+        <a href="pagebuy.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue" class="bi bi-clipboard-data" viewBox="0 0 16 16">
           <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z"/>
           <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
           <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
-</svg>
-<a href="../src/menu.html"><img src="../img/menu.svg"></a>
-</div>
-        </body>
+        </svg></a>
+        <h2>Pedidos</h2>
+      </div>
+      <div class="org">
+        <span id="menuBtn" onclick="openNav()">&equiv;</span>
+        <h2 style="margin-top: 10px;">Menu</h2>
+      </div>
+    </div>
+    
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">PERFIL</a>
+        <a href="#">CURSOS</a>
+        <a href="#">RELATÓRIOS</a>
+        <a href="#">ORÇAMENTOS</a>
+        <a href="#">ELOGIO E RECLAMAÇÕES</a>
+        <a href="#">DASHBOARD</a>
+        <a href="#">NOTIFICAÇÕES</a>
+
+
+
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+</body>
 </html>
