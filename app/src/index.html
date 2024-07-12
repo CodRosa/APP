@@ -11,6 +11,17 @@
             padding: 0;
             background-color: #f5f5f5;
         }
+        .imagem-busca {
+      display: none;
+    }
+
+    /* Mostrar a imagem apenas em dispositivos móveis (largura de tela até 768px) */
+    @media (max-width: 768px) {
+      .imagem-busca {
+        display: block;
+margin-left: -100px;
+      }
+    }
         .header {
             display: flex;
             justify-content: space-between;
@@ -68,7 +79,7 @@
             justify-content: space-around;
             padding: 30px;
             margin: -20px;
-            background-color: greenyellow;
+            background-color: white;
         }
         .footer div {
             text-align: center;
@@ -119,12 +130,50 @@
             cursor: pointer;
             color: royalblue;
         }
+        .ad-card {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    
+    .swiper-slide p {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+      .inferior {
+        background-color: #fff;
+    border: 5px solid #000; /* Borda grossa */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 20px;
+    width: 50px;
+      }
     </style>
 </head>
 <body>
     <div class="header">
-           <input type="text" placeholder="Buscar">
-           <img src="../img/search.svg" style="margin-left: -160px;">
+           <input type="text" placeholder="Buscar" style="margin-left: 190px;">
+           <img src="../img/search.svg" class = "imagem-busca" >
            <a href="pagebuy.html"><img src="../img/shopping-cart.svg"></a>
     </div>
     <div class="progress-bar">      
@@ -135,11 +184,7 @@
           </center>
         </div>
     </div>
-    <div class="main-content">
-        <div class="advertisement">
-            <h3>Renovação de anúncio grátis</h3>
-            <p>Desapega grátis na OLX e faça uma grana extra.</p>
-        </div>
+
         <div class="category-icons">
             <div>
               <div class="card">
@@ -182,33 +227,40 @@
   
     <div class="footer">
       <div class="org">
-        <a href="index.html"><img src="../img/home.svg"></a>
+        <div class="inferior"><a href="index.html"><img src="../img/home.svg"></a></div>
         <h2>Inicio</h2>
       </div>
       <div class="org">
-        <A href="loja.html"><img src="../img/shopping-bag.svg"></A>
+        <div class="inferior"><A href="loja.html"><img src="../img/shopping-bag.svg"></A></div>
         <h2>Loja</h2>
       </div>
       <div class="org">
-        <a href="calculadora.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+        <div class="inferior"><a href="calculadora.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue" class="bi bi-calculator-fill" viewBox="0 0 16 16">
           <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5m0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5z"/>
-        </svg></a>
+        </svg></a></div>
         <h2>Calculadora</h2>
       </div>
       <div class="org">
-        <a href="pagebuy.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue" class="bi bi-clipboard-data" viewBox="0 0 16 16">
+        <div class="inferior"><a href="pagebuy.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue" class="bi bi-clipboard-data" viewBox="0 0 16 16">
           <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z"/>
           <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
           <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
-        </svg></a>
+        </svg></a></div>
         <h2>Pedidos</h2>
       </div>
-      <div class="org">
-        <span id="menuBtn" onclick="openNav()">&equiv;</span>
-        <h2 style="margin-top: 10px;">Menu</h2>
-      </div>
-    </div>
+      <div class="inferior" style="background-color: #fff;
+    border: 5px solid black; /* Borda grossa */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: -5px;
+    width:50px; height: 40px;"><div class="org">
+        <span id="menuBtn" onclick="openNav()">&equiv;</span> </div>
+        <br>
+        <br>
+        <h2 style="margin-top:3px;">Menu</h2>
     
+    </div>
+    </div>
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#">PERFIL</a>
