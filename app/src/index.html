@@ -19,11 +19,12 @@
     @media (max-width: 768px) {
       .imagem-busca {
         display: block;
-margin-left: -100px;
+margin-left: -200px;
       }
     }
         .header {
             display: flex;
+            width: 1000px;
             justify-content: space-between;
             align-items: center;
             padding: 10px;
@@ -35,10 +36,10 @@ margin-left: -100px;
             padding: 5px;
         }
         .progress-bar {
-            width: 80%;
+            width: 100%;
             height: 15px;
             background-color: blue;
-            margin: 10px auto;
+            margin-left: 200px ;
             border-radius: 10px;
             position: relative;
         }
@@ -49,15 +50,9 @@ margin-left: -100px;
             border-radius: 10px;
         }
         .main-content {
-            padding: 20px;
+            padding: 30px;
         }
-        .advertisement {
-            background-color: orange;
-            padding: 10px;
-            margin-bottom: 40px;
-            text-align: center;
-            color: white;
-        }
+        
         .category-icons {
             display: flex;
             justify-content: space-around;
@@ -77,7 +72,7 @@ margin-left: -100px;
         .footer {
             display: flex;
             justify-content: space-around;
-            padding: 30px;
+            padding: 25px;
             margin: -20px;
             background-color: white;
         }
@@ -130,36 +125,7 @@ margin-left: -100px;
             cursor: pointer;
             color: royalblue;
         }
-        .ad-card {
-      width: 100%;
-      max-width: 1200px;
-      margin: auto;
-      overflow: hidden;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
     
-    .swiper-slide {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    
-    .swiper-slide img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-    
-    .swiper-slide p {
-      margin-top: 10px;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
-    }
       .inferior {
         background-color: #fff;
     border: 5px solid #000; /* Borda grossa */
@@ -174,8 +140,9 @@ margin-left: -100px;
     <div class="header">
            <input type="text" placeholder="Buscar" style="margin-left: 190px;">
            <img src="../img/search.svg" class = "imagem-busca" >
-           <a href="pagebuy.html"><img src="../img/shopping-cart.svg"></a>
+           <a href="pagebuy.html"><img src="../img/shopping-cart.svg" style="margin-right: 10px;"></a>
     </div>
+    <br>
     <div class="progress-bar">      
         <div class="fill">
           <br>
@@ -184,7 +151,7 @@ margin-left: -100px;
           </center>
         </div>
     </div>
-
+<br>
         <div class="category-icons">
             <div>
               <div class="card">
@@ -265,11 +232,11 @@ margin-left: -100px;
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#">PERFIL</a>
         <a href="#">CURSOS</a>
-        <a href="#">RELATÓRIOS</a>
+        <a href="relatorios.html">RELATÓRIOS</a>
         <a href="#">ORÇAMENTOS</a>
         <a href="#">ELOGIO E RECLAMAÇÕES</a>
         <a href="#">DASHBOARD</a>
-        <a href="#">NOTIFICAÇÕES</a>
+        <a href="notificacao.html">NOTIFICAÇÕES</a>
 
 
 

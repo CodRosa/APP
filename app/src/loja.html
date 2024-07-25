@@ -1,94 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Projetos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
+            padding: 0;
+            background-color: #f5f5f5;
         }
 
-        .container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .main-content {
             padding: 20px;
-            text-align: center;
-            max-width: 350px;
-            margin-top: -150px;
-            width: 100%;
-            height: 70%;
         }
 
-        header h1 {
-            font-size: 24px;
-            color: #4B0082;
-            margin: 0;
-        }
-
-        h2 {
-            font-size: 18px;
-            margin: 20px 0;
-        }
-
-        .button-group {
+        .product-item {
             display: flex;
-            flex-direction: column;
             align-items: center;
-        }
-
-        .button {
-            padding: 10px 20px;
-            background-color: #ccc;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
+            justify-content: space-between;
+            background-color: white;
             margin-bottom: 10px;
-            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .button.active {
-            background-color: #4B0082;
-            color: white;
+        .product-item img {
+            width: 100px;
+            margin-right: 10px;
         }
 
-        .options {
-            display: none;
-            margin-top: 10px;
-            font-size: 14px;
+        .product-details {
+            flex: 1;
         }
 
-        .options p {
-            margin: 5px 0;
+        .product-price {
+            font-weight: bold;
         }
-
         .footer {
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .footer button {
+            background-color:darkgreen;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .footer1 {
             display: flex;
             justify-content: space-around;
-            width: 100%;
-            margin: 0;
-            padding: 5px;
+            padding:10px;
+            margin: 1px;
             background-color: white;
-            position: fixed;
-            bottom: 0;
-        }
-        
-        .org {
-            text-align: center;
-        }
-        
-        .org img, .org svg {
-            display: block;
-            margin: 0 auto;
         }
 
         
@@ -126,9 +97,10 @@
         }
 
         #menuBtn {
-            font-size: 40px;
+            font-size: 50px;
             cursor: pointer;
             color: royalblue;
+            margin-top: -3px;
         }
         .inferior {
         background-color: #fff;
@@ -137,31 +109,125 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
     padding: 20px;
     width: 50px;
+    height: 40px;
       }
     </style>
 </head>
 <body>
-    <br>
-    <div class="container">
-        <header>
-        </header>
-        <main>
-            <h2 style="font-size:20px">Calculadora de projetos</h2>
-            <div class="button-group">
-                <button id="temperadoButton" class="button" style="font-size: 25px;">Temperado</button>
-                <div class="options" id="temperadoOptions">
-                    <p>Janela Temperada<br> 2 folhas</p>
-                    <p>Porta Temperada<br> 2 folhas</p>
-                    <p>Janela Temperada<br> 4 folhas</p>
-                    <p>Porta Temperada<br>4 folhas</p>
-                </div>
+   
+
+    <div class="main-content">
+        <div class="product-item">
+            <img src="Chapa Xadrez.jpg" alt="">
+            <div class="product-details">
+                <div class="product-name">Chapa Xadrez </div>
+                <div class="product-store">Loja de Serralheria XYZ</div>
+                <div class="product-price">R$117,81</div>
             </div>
-            <button class="button" style="font-size: 25px;">Stanley</button>
-            <button class="button" style="font-size: 25px;">Portões</button>
-            <button class="button" style="font-size: 25px;">Suprema</button>
-        </main>
+            <div>
+                <button>-</button>
+                <span>0</span>
+                <button>+</button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="PainelOndulado.jpg" alt="Painel Ondulado">
+            <div class="product-details">
+                <div class="product-name">Painel Ondulado</div>
+                <div class="product-store">Loja de Serralheria XYZ</div>
+                <div class="product-price">R$101,05</div>
+            </div>
+            <div>
+                <button>-</button>
+                <span>0</span>
+                <button>+</button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="PerfilUEnrijecido.jpg" alt="Perfil U Enrijecido">
+            <div class="product-details">
+                <div class="product-name">Perfil U Enrijecido</div>
+                <div class="product-store">Loja de Serralheria XYZ</div>
+                <div class="product-price">R$100,91</div>
+            </div>
+            <div>
+                <button>-</button>
+                <span>0</span>
+                <button>+</button>
+            </div>
+        </div>
+
+        <div class="product-item">
+            <img src="Metalon.jpg" alt="Metalon">
+            <div class="product-details">
+                <div class="product-name">Metalon</div>
+                <div class="product-store">Loja de Serralheria XYZ</div>
+                <div class="product-price">R$595,22</div>
+            </div>
+            <div>
+                <button>-</button>
+                <span>0</span>
+                <button>+</button>
+            </div>
+        </div>
+        <div class="product-item">
+        <img src="TelaOndulada.jpg" alt="Tela Ondulada">
+        <div class="product-details">
+            <div class="product-name">Tela Ondulada</div>
+            <div class="product-store">Loja de Serralheria XYZ</div>
+            <div class="product-price">R$100,91</div>
+        </div>
+        <div>
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+        </div>
     </div>
 
+    <div class="product-item">
+        <img src="EletrodoTitanium.jpg" alt="Eletrodo Titanium">
+        <div class="product-details">
+            <div class="product-name">Eletrodo Titanium</div>
+            <div class="product-store">Loja de Serralheria XYZ</div>
+            <div class="product-price">R$100,91</div>
+        </div>
+        <div>
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+        </div>
+    </div>
+    <div class="product-item">
+        <img src="PuxadorRetoparapotade180MM.jpg" alt="Puxador Reto parapota de 180MM">
+        <div class="product-details">
+            <div class="product-name"> Puxador Reto parapota de 180MM</div>
+            <div class="product-store">Loja de Serralheria XYZ</div>
+            <div class="product-price">R$100,91</div>
+        </div>
+        <div>
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+        </div>
+    </div>
+    <div class="product-item">
+        <img src="Thinner.jpg" alt="Thinner">
+        <div class="product-details">
+            <div class="product-name">Thinner</div>
+            <div class="product-store">Loja de Serralheria XYZ</div>
+            <div class="product-price">R$100,91</div>
+        </div>
+        <div>
+            <button>-</button>
+            <span>0</span>
+            <button>+</button>
+        </div>
+    </div>
+    </div>
+
+    
     <div class="footer">
         <div class="org"> <div class="inferior" style="background-color: #fff;
             border: 5px solid black; /* Borda grossa */
@@ -169,8 +235,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
             padding: -5px;
             width:50px; height: 40px;">
-            <a href="index.html"><img src="../img/home.svg"></a></div>
-            <h2 style="margin-top: 25px;">Inicio</h2>
+            <center><a href="index.html"><img src="../img/home.svg"></center></a></div>
+            <h2 style="margin-top: 20px;">Inicio</h2>
         </div>
         <div class="inferior" style="background-color: #fff;
         border: 5px solid black; /* Borda grossa */
@@ -178,10 +244,10 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
         padding: -5px;
         width:50px; height: 40px;"><div class="org">
-            <a href="loja.html"><img src="../img/shopping-bag.svg"></a></div>
+            <center><a href="loja.html"><img src="../img/shopping-bag.svg"></a></center></div>
             <br>
             <br>
-            <h2 style="margin-top: 17px;">Loja</h2>
+            <h2 style="margin-top: 12px;">Loja</h2>
         </div>
         <div class="org">
             <div class="inferior" style="background-color: #fff;
@@ -189,9 +255,9 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
             padding: -5px;
-            width:50px; height: 40px;"><a href="calculadora.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+            width:50px; height: 40px;"><center><a href="calculadora.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue" class="bi bi-calculator-fill" viewBox="0 0 16 16">
                 <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5m0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5z"/>
-            </svg></a></div>
+            </svg></center></a></div>
             <h2>Calculadora</h2>
         </div>
         <div class="org">
@@ -200,11 +266,11 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
             padding: -5px;
-            width:50px; height: 40px;"><a href="pagebuy.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue" class="bi bi-clipboard-data" viewBox="0 0 16 16">
+            width:50px; height: 40px;"><center><a href="pagebuy.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="RoyalBlue" class="bi bi-clipboard-data" viewBox="0 0 16 16">
                 <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z"/>
                 <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
                 <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
-            </svg></a></div>
+            </svg></center></a></div>
             <h2>Pedidos</h2>
         </div>
         <div class="inferior" style="background-color: #fff;
@@ -214,10 +280,10 @@
         padding: -5px;
         width:50px; height: 40px;">
             <div class="org">
-                <span id="menuBtn" onclick="openNav()">&equiv;</span></div>
+          <center><span id="menuBtn" onclick="openNav()">&equiv;</span></center></div>
                 <br>
                 <br>
-                <h2 style="margin-top: 5px;">Menu</h2>
+                <h2 style="margin-top: -19px;">Menu</h2>
               </div>
             </div>
             

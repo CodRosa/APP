@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #card {
+            width: 500px;
+            height: 700px;
+            border-radius: 20px;
+            background-color: CornflowerBlue		;
+
+        }
+
+        .form_grupo {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    position: relative;
+}
+.form_grupo .legenda { 
+    width: 30%;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+/* SUBMIT */
+.submit { width:100%; float:left; }
+.submit_btn {
+    display: block;
+float: right;
+    padding: 7px 30px;
+    border: none;
+    outline: none;
+    background-color:lime;
+    color: #fff;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    font-family: inherit;
+    font-size: 25px;
+    font-family:'open_sansregular';
+    border-radius: 6px;
+    margin: -7px auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit_btn:hover {
+    background-color:Cyan	;
+    transform: scale(1.03);
+}
+
+
+
+.form_new_input {
+    display: none;
+}
+
+.form_grupo {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.form_input {
+    font-size: 15px;
+    font-family: inherit;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: 1px #f2f2f2 solid;
+    background:white;
+    outline: none;
+    width: 60%;
+    transition: all 0.3s;
+}
+.form_message,
+.form_message .message_input {
+    width: 60%;
+    float:left;
+}
+.form_message_label {
+    width: 40%;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    
+}
+.informations {
+    width: 100px;
+    height: 80px;
+    background-color: white;
+    border-radius: 20px;
+}
+.upload-section {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .upload-section input[type="file"] {
+            margin: 10px 0;
+        }
+
+        .upload-section img {
+            max-width: 100%;
+            height: auto;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body bgcolor="Navy">
+    <center>
+    <div id="card">
+    <h1 style="color: whitesmoke; font-size: 50px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Cadastro</h1>
+    <form class="form" action="banco.php" method="post">
+        
+        <div class="form_grupo">
+            <label for="nome" class="form_label" style="color:whitesmoke;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 15px;"><b>Nome:</b></label>
+            <input type="text" name="nome" class="form_input" id="nome" placeholder="EX: Igor Teles" required>
+        </div>
+        
+        <div class="form_grupo">
+            <label for="e-mail" class="form_label"  style="color:whitesmoke;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 15px;"><b>Endereço:</b></label>
+            <input type="text" name="nome" class="form_input" id="nomeresponsavel" placeholder="EX: Rua Avenida das Américas,350" required>
+        </div>
+
+        <div class="form_grupo">
+            <label for="numero" class="form_label"  style="color:whitesmoke;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 15px;"><b>Nome fantasia:</b></label>
+            <input type="text" name="numerocontato" class="form_input" id="numcontato" placeholder="EX: Store Enginner" required>
+        </div>        
+        <div class="form_grupo">
+            
+            <label for="conta" class="form_label"  style="color:whitesmoke;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 15px;"><b>CNPJ:</b></label>
+            <input type="text" name="conta" class="form_input" id="containsta" placeholder="EX: 99.999.999/9999-99" required>
+        </div>
+
+        <div class="form_grupo">
+            
+            <label for="conta" class="form_label"  style="color:whitesmoke;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 15px;"><b>WhatsApp Pessoal:</b></label>
+            <input type="text" name="conta" class="form_input" id="containsta" placeholder="EX: +55 (21) 984379-251" required>
+        </div>
+
+        <div class="form_grupo">
+            
+            <label for="conta" class="form_label"  style="color:whitesmoke;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 15px;"><b>WhatsApp da empresa:</b></label>
+            <input type="text" name="conta" class="form_input" id="containsta" placeholder="EX: +55 (21) 983719-245" required>
+        </div>
+
+        <div class="form_grupo">
+            
+            <label for="conta" class="form_label"  style="color:whitesmoke;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 15px;"><b>Código de indicação:</b></label>
+            <input type="text" name="conta" class="form_input" id="containsta" placeholder="EX: F109Ita" required>
+        </div>
+       
+        <div class="form_grupo" style="justify-content: space-evenly;">
+           
+                <div class="upload-section">
+                     <div class="informations"><input type="file" id="fileInput" accept="image/*"></div>
+                </div>
+                <div class="upload-section">
+                    <div class="informations"><input type="file" id="fileInput" accept="image/*"></div>
+               </div>
+               <div class="upload-section">
+                <div class="informations"><input type="file" id="fileInput" accept="image/*"></div>
+           </div>
+            
+                <script>
+                    document.getElementById('fileInput').addEventListener('change', function(event) {
+                        const file = event.target.files[0];
+                        if (file) {
+                            const reader = new FileReader();
+                            reader.onload = function(e) {
+                                const img = document.getElementById('uploadedImage');
+                                img.src = e.target.result;
+                                img.style.display = 'block';
+                            }
+                            reader.readAsDataURL(file);
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="form_message">
+       
+            <div class="submit">
+            <center>
+              <input type="hidden" name="acao" value="enviar">
+              <button type="submit" name="Submit" class="submit_btn" style="margin-top: -62px;">Cadastrar</button>
+           </div><!--container_form-->
+            </div>
+    </form>
+
+</center>
+</body>
+</html>
